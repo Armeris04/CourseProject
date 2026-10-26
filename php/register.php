@@ -23,28 +23,26 @@ session_start();
         }
     }
 
-    if (isset($_POST['signIn']))
-            {
-                $email = $_POST['email'];
-                $password = $_POST['pass'];
-                $password = md5($password);
+    // if (isset($_POST['signIn']))
+    //         {
+    //             $email = $_POST['email'];
+    //             $password = $_POST['pass'];
+    //             $password = md5($password);
 
-                $sql = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
-                $result = $conn->query($sql);
+    //             $sql = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
+    //             $result = $conn->query($sql);
 
-                if ($result->num_rows>0)
-                    {
-                        
+    //             if ($result->num_rows>0)
+    //                 {
+    //                     $row = $result->fetch_assoc();
+    //                     $_SESSION['email']=$row['email'];
 
-                        $row = $result->fetch_assoc();
-                        $_SESSION['email']=$row['email'];
+    //                     header("location: homepage.php");
+    //                     exit();
+    //                 }
 
-                        header("location: homepage.php");
-                        exit();
-                    }
-
-                    else {
-                        echo "Not Found, Incorrect Email or Password";
-                    }
-            }
+    //                 else {
+    //                     echo "Not Found, Incorrect Email or Password";
+    //                 }
+    //         }
 ?>

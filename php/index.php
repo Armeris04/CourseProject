@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register & Login</title>
     <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-    <link rel = "stylesheet" href="style.css">
+    <link rel = "stylesheet" href="../style/style.css">
 </head>
 <body>
     <div class="container" id="signUp" style="display:none">
@@ -51,7 +51,7 @@
     <div class="container" id ="signIn">
     <h1 class="form-title">Sign in</h1>
 
-    <form method = "post" action ="register.php">
+    <form method = "post" action ="login.php">
         <div class="input-group">
             <i class = "fa-solid fa-envelope"></i>
             <input type = "email" name = "email" placeholder = "example@gmail.com" required>
@@ -66,7 +66,7 @@
         <input type = "submit" class= "btn" value = "Sign in" name = "signIn">
         </form>
         <div class="links">
-            <p>Dont Have Account?</p>
+            <p>Don't Have Account?</p>
             <button id="signUpButton">Sign up</button>
         </div>
     </div>

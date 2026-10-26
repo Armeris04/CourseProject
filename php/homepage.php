@@ -1,5 +1,4 @@
 <?php
-session_start();
 include ("connect.php");
 ?>
 
@@ -28,6 +27,15 @@ include ("connect.php");
             :)
         </p>
         
+        <div>
+            <a href="my_tickets.php">
+                <button>My tickets</button>
+            </a>
+
+            <a href="submit_tickets_form.php">
+                <button >Submit new ticket</button>
+            </a>
+    
         <a href="logout.php">Logout</a>
 
     </div>
