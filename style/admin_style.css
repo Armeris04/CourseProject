@@ -1,0 +1,22 @@
+.dashboard-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.done-btn {
+    background-color: #00b3ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.done-btn:hover {
+    background-color: #008fbf;
+}

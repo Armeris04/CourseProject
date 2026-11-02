@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href="../style/style_homepage.css">
+    <link rel = "stylesheet" href="../style/common_elements.css">
+    <link rel = "stylesheet" href="../style/submit_tickets_form.css">
     <title>Document</title>
 </head>
 <body>
-    <div>
+    <div class="main-container">
     <form method = "post" action = "submit_tickets.php">
-        <div>
+        <div class="input-group">
+            <textarea name="issue" class="inputs" required></textarea>
             <label for="Issue">Problema</label>
-            <input type="text" name="issue">
             
         </div>
 
-        <div>
+        <div class="input-group">
+            <textarea name="location" class="inputs" required></textarea>
             <label for="location">Lokacija</label>
-            <input type="text" name="location">
             
         </div>
         <input type="submit" class="btn" value="Submit">

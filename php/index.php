@@ -71,7 +71,7 @@
         </div>
     </div>
     
-    <script src="script.js">
+    <script src="../js/script.js">
 
     </script>
     
