@@ -4,10 +4,10 @@ session_start();
 include('connect.php');
 
 if (isset($_POST['signIn'])) {
-    $email = $_POST['email'];
-    $password = $_POST['pass'];
+    $email = $_POST['el_pastas'];
+    $password = $_POST['slaptazodis'];
 
-    $sql = "SELECT id, email, password, role FROM users WHERE email = ?";
+    $sql = "SELECT naudotojo_id, el_pastas, slaptazodis, vaidmuo FROM naudotojai WHERE el_pastas = ?";
 
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $email);
@@ -18,13 +18,12 @@ if (isset($_POST['signIn'])) {
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         
-        if (password_verify($password, $row['password'])) {
+        if (password_verify($password, $row['slaptazodis'])) {
 
-            $_SESSION['id'] = $row['id']; 
-            $_SESSION['user_id'] = $row['id'];
-            $_SESSION['role'] = $row['role'];
+            $_SESSION['naudotojo_id'] = $row['naudotojo_id'];
+            $_SESSION['vaidmuo'] = $row['vaidmuo'];
 
-            if ($row['role'] == 'admin') {
+            if ($row['vaidmuo'] == 'admin') {
                 header("Location: admin_dashboard.php");
                 exit();
             }
@@ -32,10 +31,10 @@ if (isset($_POST['signIn'])) {
             exit();
 
         } else {
-            echo "Incorrect Email or Password";
+            echo "Neteisingas el. pašto adresas arba slaptažodis.";
         }
     } else {
-        echo "Incorrect Email or Password";
+        echo "Neteisingas el. pašto adresas arba slaptažodis.";
     }
 
     $stmt->close();

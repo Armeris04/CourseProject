@@ -1,73 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register & Login</title>
+    <title>Prisijungimas ir registracija</title>
     <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
     <link rel = "stylesheet" href="../style/style.css">
 </head>
 <body>
     <div class="container" id="signUp" style="display:none">
-    <h1 class="form-title">Register</h1>
+    <h1 class="form-title">Registracija</h1>
 
     <form method = "post" action = "register.php">
 
         <div class="input-group">
             <i class = "fas fa-user"></i>
-            <input type = "text" name = "name" placeholder="First Name" required>
-            <label for = "name">First name</label>
+            <input type = "text" name = "vardas" placeholder="Vardas" required>
+            <label for = "vardas">Vardas</label>
         </div>
 
         <div class="input-group">
             <i class = "fas fa-user"></i>
-            <input type = "text" name = "surname" placeholder="Last Name" required>
-            <label for = "surname">Last Name</label>
+            <input type = "text" name = "pavarde" placeholder="Pavardė" required>
+            <label for = "pavarde">Pavardė</label>
         </div>
 
         <div class="input-group">
             <i class = "fa-solid fa-envelope"></i>
-            <input type = "email" name = "email" placeholder = "example@gmail.com" required>
-            <label for = "email">Email</label>
+            <input type = "email" name = "el_pastas" placeholder = "pavyzdys@gmail.com" required>
+            <label for = "el_pastas">El. paštas</label>
         </div>
 
         <div class="input-group">
             <i class = "fas fa-lock"></i>
-            <input type = "password" name = "pass" placeholder = "Pasword" required>
-            <label for = "pass">Password</label>
+            <input type = "password" name = "slaptazodis" placeholder = "Slaptažodis" required>
+            <label for = "slaptazodis">Slaptažodis</label>
         </div>
 
-            <input type = "submit" class="btn" value = "Sign Up" name = "signUp">
+            <input type = "submit" class="btn" value = "Registruotis" name = "signUp">
 
         </form>
         
         <div class="links">
-            <p>Already Have An Accout?</p>
-            <button id="signInButton">Sign in</button>
+            <p>Jau turite paskyrą?</p>
+            <button id="signInButton">Prisijungti</button>
         </div>
     </div>
 
 
     <div class="container" id ="signIn">
-    <h1 class="form-title">Sign in</h1>
+    <h1 class="form-title">Prisijungimas</h1>
 
     <form method = "post" action ="login.php">
         <div class="input-group">
             <i class = "fa-solid fa-envelope"></i>
-            <input type = "email" name = "email" placeholder = "example@gmail.com" required>
-            <label for = "email">Email</label>
+            <input type = "email" name = "el_pastas" placeholder = "pavyzdys@gmail.com" required>
+            <label for = "el_pastas">El. paštas</label>
         </div>
 
         <div class="input-group">
             <i class = "fas fa-lock"></i>
-            <input type = "password" name = "pass" placeholder = "Pasword" required>
-            <label for = "pass">Password</label>
+            <input type = "password" name = "slaptazodis" placeholder = "Slaptažodis" required>
+            <label for = "slaptazodis">Slaptažodis</label>
         </div>
-        <input type = "submit" class= "btn" value = "Sign in" name = "signIn">
+        <input type = "submit" class= "btn" value = "Prisijungti" name = "signIn">
         </form>
         <div class="links">
-            <p>Don't Have Account?</p>
-            <button id="signUpButton">Sign up</button>
+            <p>Neturite paskyros?</p>
+            <button id="signUpButton">Registruotis</button>
         </div>
     </div>
     

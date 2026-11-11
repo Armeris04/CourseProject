@@ -1,4 +1,4 @@
 <script>
-alert("Success")
+alert("Bilietas sėkmingai pateiktas.")
 window.location.href = "homepage.php"
 </script>

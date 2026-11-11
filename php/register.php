@@ -3,12 +3,12 @@ session_start();
     include ("connect.php");
 
     if (isset($_POST['signUp'])) {
-        $firstName = $_POST['name'];
-        $lastName = $_POST['surname'];
-        $email = $_POST['email'];
-        $password = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+        $firstName = $_POST['vardas'];
+        $lastName = $_POST['pavarde'];
+        $email = $_POST['el_pastas'];
+        $password = password_hash($_POST['slaptazodis'], PASSWORD_DEFAULT);
 
-        $checkEmail = "SELECT * FROM users WHERE email = ?";
+        $checkEmail = "SELECT * FROM naudotojai WHERE el_pastas = ?";
         $stmt = $conn->prepare($checkEmail);
         $stmt->bind_param("s", $email);
         $stmt->execute();
@@ -16,9 +16,9 @@ session_start();
         
 
         if ($result->num_rows>0)
-            echo "Email Adress Already Exists!";
+            echo "Šis el. pašto adresas jau užregistruotas.";
         else {
-            $insertQuery = "INSERT INTO users (firstName, lastName, email, password)
+            $insertQuery = "INSERT INTO naudotojai (vardas, pavarde, el_pastas, slaptazodis)
                 VALUES (?, ?, ?, ?)";
 
 $stmt = $conn->prepare($insertQuery);
@@ -28,7 +28,7 @@ if ($stmt->execute()) {
         header("Location: index.php");
         exit();
     } else {
-    echo "Error: " . $stmt->error;
+    echo "Klaida: " . $stmt->error;
         }
 }
 }
